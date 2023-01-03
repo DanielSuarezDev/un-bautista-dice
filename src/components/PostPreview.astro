@@ -13,7 +13,7 @@ const { frontmatter: post, url } = Astro.props.post
         <h4 class="post-preview__title">
             <a href={url} title={post.title}>{post.title}</a>
         </h4>
-        <p class="post-preview__desc">
+        <p class="post-preview__desc dark:text-gray-200">
             {post.description}
         </p>
     </div>
