@@ -4,6 +4,7 @@ import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import mdx from '@astrojs/mdx'
+import matomo from '@jop-software/astro-matomo'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
