@@ -9,6 +9,15 @@ const { content, showPageHeader = true } = Astro.props
 <html lang="en">
     <head>
         <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
+        <meta property="og:title" content={content.title} />
+        <meta property="og:description" content={content.description} />
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1526L9G6G9');
+          </script>
+
     </head>
     <MainLayout>
         {showPageHeader &&

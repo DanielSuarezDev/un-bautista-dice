@@ -8,7 +8,7 @@ tags:
   - maestros
 author: un Bautista dice
 authorTwitter: un Bautista dice
-date: 2023-02-13T04:45:37.943Z
+date: 2023-01-01T04:45:37.943Z
 ---
 La **Escuela Dominical** tiene una rica historia que se remonta a la década de 1780, cuando Robert Raikes comenzó a enseñar a los niños pobres de Gloucester, Inglaterra, a leer y escribir. Raikes también enseñó la Biblia y se aseguró de que los niños asistieran a la iglesia. Desde entonces, la Escuela Dominical se ha convertido en una parte integral de la educación cristiana en todo el mundo. En este blog, exploraremos por qué la Escuela Dominical es importante y cómo puede ayudarnos a crecer en la fe.
 

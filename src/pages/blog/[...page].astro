@@ -8,7 +8,7 @@ import Matomo from '@jop-software/astro-matomo'
 
 
 let title = 'Blog'
-let description = 'All the articles posted so far...'
+let description = 'Todos los articulos posteados...'
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob('./*.md');
@@ -39,17 +39,9 @@ const { page } = Astro.props
       }} />
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1526L9G6G9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1526L9G6G9');
-</script>
 
 </head>
 <DefaultPageLayout content={{ title, description }}>
-  <!-- <Matomo trackerUrl="https://unbautistadice.matomo.cloud/" siteId="1" /> -->
     <PostPreviewList posts={page.data} />
     <Paginator page={page} />
 </DefaultPageLayout>

@@ -9,7 +9,7 @@ tags:
   - maestros
 author: Un Bautista Dice
 authorTwitter: Un Bautista Dice
-date: 2023-02-13T14:13:21.395Z
+date: 2023-02-10T14:13:21.395Z
 ---
 Cuando se trata de educación cristiana, a menudo nos enfocamos en enseñar la Palabra de Dios y en la disciplina, pero es importante recordar que para educar a un niño en la fe, primero debemos **conocer su corazón.** En este blog, exploraremos por qué es importante conocer el corazón de un niño y cómo podemos hacerlo de manera efectiva.
 
