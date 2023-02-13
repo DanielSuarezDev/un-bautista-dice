@@ -1,13 +1,14 @@
-import path, { dirname } from 'path'
-import { fileURLToPath } from 'url'
-import svelte from '@astrojs/svelte'
-import tailwind from '@astrojs/tailwind'
-import sitemap from '@astrojs/sitemap'
-import mdx from '@astrojs/mdx'
-import matomo from '@jop-software/astro-matomo'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import svelte from '@astrojs/svelte';
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import matomo from '@jop-software/astro-matomo';
+import { defineConfig } from "astro/config";
+import partytown from "@astrojs/partytown";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -17,39 +18,35 @@ const __dirname = dirname(__filename)
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
+
+// https://astro.build/config
+export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
   // root: '.',     // Where to resolve all URLs relative to. Useful if you have a monorepo project.
   // outDir: './dist',       // When running `astro build`, path to final static output
   // publicDir: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
 
-  site: 'https://astro-ink.vercel.app', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  site: 'https://astro-ink.vercel.app',
+  // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   server: {
     // port: 3000,         // The port to run the dev server on.
   },
-  integrations: [
-    matomo({
-      baseUrl: "https://unbautistadice.matomo.cloud/",
-      siteId: 1
-    }),
-    mdx(),
-    svelte(),
-    tailwind({
-        config: {
-            applyBaseStyles: false
-        },
-    }),
-    sitemap()
-  ],
-  
+  integrations: [matomo({
+    baseUrl: "https://unbautistadice.matomo.cloud/",
+    siteId: 1
+  }), mdx(), svelte(), tailwind({
+    config: {
+      applyBaseStyles: false
+    }
+  }), sitemap(), partytown()],
   vite: {
     plugins: [],
     resolve: {
-        alias: {
-          '$': path.resolve(__dirname, './src'),
-        },
+      alias: {
+        '$': path.resolve(__dirname, './src')
+      }
     },
     optimizeDeps: {
-        allowNodeBuiltins: true
+      allowNodeBuiltins: true
     }
   }
 });

@@ -31,6 +31,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
+    "@astrojs/partytown": "^1.0.3",
     "@jop-software/astro-matomo": "^1.1.0",
     "astro-seo": "^0.6.1"
   }
