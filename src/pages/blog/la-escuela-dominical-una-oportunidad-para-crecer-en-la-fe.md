@@ -5,7 +5,7 @@ description: "La Escuela Dominical: Una oportunidad para crecer en la fe, La
   **Escuela Dominical** tiene una rica historia que se remonta a la década de
   1780, cuando Robert Raikes comenzó a enseñar a los niños pobres..."
 tags:
-  - niños
+  - maestros
 author: un Bautista dice
 authorTwitter: un Bautista dice
 date: 2023-02-13T04:45:37.943Z
