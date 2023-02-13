@@ -1,6 +1,7 @@
 ---
 
 import { SITE } from '$/config'
+import  Firebase  from './Firebase.astro'
 import BaseHead from '$/components/BaseHead.astro';
 import MainLayout from '$/components/MainLayout.astro';
 import  GoogleAnalitycs  from './GoogleAnalitycs.astro'
@@ -11,6 +12,7 @@ const { content, showPageHeader = true } = Astro.props
 <html lang="en">
     <head>
         <!-- Google Analitycs -->
+        <Firebase />
         <GoogleAnalitycs />
         <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
         <meta property="og:title" content={content.title} />

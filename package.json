@@ -33,6 +33,7 @@
   "dependencies": {
     "@astrojs/partytown": "^1.0.3",
     "@jop-software/astro-matomo": "^1.1.0",
-    "astro-seo": "^0.6.1"
+    "astro-seo": "^0.6.1",
+    "firebase": "^9.17.1"
   }
 }
