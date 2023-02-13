@@ -37,7 +37,12 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
     config: {
       applyBaseStyles: false
     }
-  }), sitemap(), partytown()],
+  }), sitemap(), partytown({
+    // Adds dataLayer.push as a forwarding-event.
+    config: {
+      forward: ["dataLayer.push"],
+    },
+  }),],
   vite: {
     plugins: [],
     resolve: {
