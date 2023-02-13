@@ -15,7 +15,7 @@ const { post } = Astro.props
                 <a href={post.url} title={post.title} target="_blank">{post.title}</a>
             </h4>
             <div>
-            <strong>{post.host}</strong>
+            <strong class="post-preview__strong">{post.host}</strong>
             {
                 post.participants.length > 0 && ` <em>with</em> ${post.participants.join(', ')}`
             }
@@ -41,6 +41,9 @@ const { post } = Astro.props
     }
     .post-preview__title {
         @apply text-2xl font-semibold text-theme-primary dark:text-theme-dark-primary hover:underline
+    }
+    .post-preview__strong {
+        @apply text-theme-primary dark:text-theme-dark-primary hover:underline
     }
     .post-preview__desc {
         @apply text-lg leading-6 dark:text-white line-clamp-2

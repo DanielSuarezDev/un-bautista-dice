@@ -36,6 +36,9 @@ module.exports = {
                                 color: colors.primary,
                               },
                         },
+                        strong: {
+                            color: colors.primary,
+                          },
                         blockquote: {
                             color: colors.primary,
                             borderColor: colors.dark.primary
