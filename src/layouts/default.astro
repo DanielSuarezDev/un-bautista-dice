@@ -11,6 +11,8 @@ const { content, showPageHeader = true } = Astro.props
         <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
         <meta property="og:title" content={content.title} />
         <meta property="og:description" content={content.description} />
+              <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1526L9G6G9"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

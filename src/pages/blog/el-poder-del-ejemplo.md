@@ -7,7 +7,7 @@ tags:
   - ejemplos
 author: Un Bautista dice
 authorTwitter: Un Bautista dice
-date: 2023-02-13T03:25:24.036Z
+date: 2023-02-12T03:25:24.036Z
 ---
 **"Sed imitadores de mí, así como yo de Cristo" (1 Corintios 11:1)**
 
