@@ -26,6 +26,10 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     // port: 3000,         // The port to run the dev server on.
   },
   integrations: [
+    matomo({
+      baseUrl: "https://unbautistadice.matomo.cloud/",
+      siteId: 1
+    }),
     mdx(),
     svelte(),
     tailwind({
@@ -35,6 +39,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     }),
     sitemap()
   ],
+  
   vite: {
     plugins: [],
     resolve: {

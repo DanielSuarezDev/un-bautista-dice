@@ -3,6 +3,9 @@ import DefaultPageLayout from '$/layouts/default.astro'
 import PostPreviewList from '$/components/PostPreviewList.astro'
 import Paginator from '$/components/Paginator.astro'
 import { PAGE_SIZE } from '$/config'
+import { SEO } from "astro-seo";
+import Matomo from '@jop-software/astro-matomo'
+
 
 let title = 'Blog'
 let description = 'All the articles posted so far...'
@@ -18,7 +21,27 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props
 ---
+<head>
+  <SEO
+      title="A Very Descriptive Title"
+      description="A heavily optimized description full of well-researched keywords."
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          },
+          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+          { name: "twitter:description", content: "Agent" },
+        ],
+      }} />
+      
+</head>
 <DefaultPageLayout content={{ title, description }}>
+  <Matomo trackerUrl="https://example.com/matomo" siteId="1" />
     <PostPreviewList posts={page.data} />
     <Paginator page={page} />
 </DefaultPageLayout>
