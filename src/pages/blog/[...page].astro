@@ -12,7 +12,8 @@ let description = 'All the articles posted so far...'
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob('./*.md');
-  const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  // @ts-ignore
+  const sortedPosts = allPosts.sort((a: any, b: any): any => new Date(b.date) - new Date(a.date));
 
     return paginate(sortedPosts, {
       pageSize: PAGE_SIZE
@@ -23,8 +24,8 @@ const { page } = Astro.props
 ---
 <head>
   <SEO
-      title="A Very Descriptive Title"
-      description="A heavily optimized description full of well-researched keywords."
+      title="Un Bautista Dice"
+      description="Enseñando por pasión a Cristo."
       extend={{
         // extending the default link tags
         link: [{ rel: "icon", href: "/favicon.ico" }],
@@ -34,14 +35,12 @@ const { page } = Astro.props
             name: "twitter:image",
             content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
           },
-          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-          { name: "twitter:description", content: "Agent" },
         ],
       }} />
       
 </head>
 <DefaultPageLayout content={{ title, description }}>
-  <Matomo trackerUrl="https://unbautistadice.matomo.cloud/" siteId="1" />
+  <!-- <Matomo trackerUrl="https://unbautistadice.matomo.cloud/" siteId="1" /> -->
     <PostPreviewList posts={page.data} />
     <Paginator page={page} />
 </DefaultPageLayout>
