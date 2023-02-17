@@ -1,53 +1,56 @@
 ---
-    import { SITE } from '$/config'
-    import SvgIcon from './SvgIcon.astro'
-    import ModeSwitcherBtn from './ModeSwitcherBtn.svelte'
-    import SearchBtn from './SearchBtn.svelte'
-
+import { SITE } from "$/config";
+import SvgIcon from "./SvgIcon.astro";
+import ModeSwitcherBtn from "./ModeSwitcherBtn.svelte";
+import SearchBtn from "./SearchBtn.svelte";
 ---
 
-<header class="header">
+<div>
+  <div class="banner-top">
+    <span> Uniendo fe y acción, impulsando vidas con amor cristiano.</span>
+  </div>
+  <header class="header">
     <div class="header__logo">
-        <a href="/" class="avatar">
-            <img class="header__logo-img" src="/assets/logo.svg" alt="Astro logo" />
-        </a>
+      <a href="/" class="avatar">
+        <img class="header__logo-img" src="/assets/logo.svg" alt="Astro logo" />
+      </a>
     </div>
-    <div class="header__meta flex-1">
-        <h3 class="header__title dark:text-theme-dark-secondary">
-            <a href="">{ SITE.name }</a>
-        </h3>
-        <div class="header__meta-more flex">
-            <p class="header__desc dark:text-gray-200">
-                { SITE.description }
-            </p>
-            <nav class="header__nav flex">
-                <ul class="header__ref-list">
-                    <li>
-                        <SearchBtn client:visible />
-                    </li>
-                    <li>
-                        <ModeSwitcherBtn client:visible />
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+    <!-- <SearchBtn client:visible /> -->
+  </header>
+</div>
 
 <style>
-    .header {
-        @apply flex gap-4 border-b py-3 /* border-gray-200 dark:border-gray-700 - check styles/global.css */
-    }
-    .header__logo-img {
-        @apply w-16 h-16 rounded-full overflow-hidden
-    }
-    .header__title {
-        @apply text-4xl font-extrabold md:text-5xl text-theme-secondary dark:text-theme-dark-secondary
-    }
-    .header__desc {
-        @apply text-xl flex-1 dark:text-gray-200
-    }
-    .header__ref-list {
-        @apply flex gap-3 text-gray-400
-    }
+  span {
+    font-size: 10px;
+    /* line-height: 20px; */
+    text-align: center;
+  }
+  .header {
+    @apply flex gap-4 py-3 px-4 md:px-8 justify-center items-center;
+  }
+  .header__logo-img {
+    width: 170px;
+    height: 100px;
+  }
+  .header__title {
+    @apply text-4xl font-extrabold md:text-5xl text-theme-secondary dark:text-theme-dark-secondary;
+  }
+  .header__desc {
+    @apply text-xl flex-1 dark:text-gray-200;
+  }
+  .header__ref-list {
+    @apply flex gap-3 text-gray-400;
+  }
+  .banner-top {
+    background: linear-gradient(90deg, #FFD133 0%, #FFD133 100%);
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>

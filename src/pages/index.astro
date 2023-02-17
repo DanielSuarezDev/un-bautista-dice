@@ -1,17 +1,19 @@
 ---
 import DefaultPageLayout from '$/layouts/default.astro'
 import PostPreviewList from '$/components/PostPreviewList.astro'
+import Content from '$/components/Content.astro'
 
 
-const title = 'Home'
+const title = 'Inicio'
 const description = 'Un blog bíblico para compartir la verdad mediante la palabra de Dios.'
 
 const posts = await Astro.glob('./blog/*.md')
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
+    <Content />
     <PostPreviewList posts={posts} />
     <div class="page__actions">
-        <a class="action__go-to-blog" href="/blog" title="All Posts">All Posts &rarr;</a>
+        <a class="action__go-to-blog" href="/blog" title="All Posts">Leer más post &rarr;</a>
     </div>
 </DefaultPageLayout>
 

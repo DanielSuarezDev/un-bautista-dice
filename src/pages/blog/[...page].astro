@@ -3,6 +3,7 @@ import DefaultPageLayout from '$/layouts/default.astro'
 import PostPreviewList from '$/components/PostPreviewList.astro'
 import Paginator from '$/components/Paginator.astro'
 import { PAGE_SIZE } from '$/config'
+import SubscribeForm  from '$/components/SuscribeForm.astro'
 import { SEO } from "astro-seo";
 import Matomo from '@jop-software/astro-matomo'
 
@@ -24,7 +25,7 @@ const { page } = Astro.props
 ---
 <head>
   <SEO
-      title="Un Bautista Dice"
+      title="Impulso Cristiano"
       description="Enseñando por pasión a Cristo."
       extend={{
         // extending the default link tags

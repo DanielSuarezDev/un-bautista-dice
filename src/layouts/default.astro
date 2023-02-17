@@ -10,6 +10,7 @@ const { content, showPageHeader = true } = Astro.props
 <!doctype html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
         <GoogleAnalitycs />
         <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description }/>
         <meta property="og:title" content={content.title} />

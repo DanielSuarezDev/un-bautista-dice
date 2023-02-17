@@ -1,20 +1,42 @@
 ---
-    import { SITE } from '$/config'
-    import ModeLabel from './ModeLabel.svelte'
-    import NetlifyIdentity from './NetlifyIdentity.svelte'
+import { SITE } from "$/config";
+import ModeLabel from "./ModeLabel.svelte";
+import NetlifyIdentity from "./NetlifyIdentity.svelte";
 ---
+
 <footer class="footer">
-    <nav class="nav dark:text-gray-200">
-        <div>2021  &copy; Copyright notice |  <a href={ SITE.githubUrl } title={`${ SITE.name }'s Github URL'`}>{ SITE.name }</a>
-        <ModeLabel client:load/> Siguenos en: <a class="link" href="https://www.instagram.com/unbautistadice/" target="_blank">Instagram</a></div>
-        <NetlifyIdentity client:load/>
-    </nav>
+  <nav class="nav">
+    <img class="header__logo-img" src="/assets/impulso.svg" alt="Astro logo" />
+    <div class="nav-text">
+      2021 &copy; Copyright notice | <a
+        href={SITE.githubUrl}
+        title={`${SITE.name}'s Github URL'`}>{SITE.name}</a
+      >
+      <ModeLabel client:load /> Siguenos en: <a
+        class="link"
+        href="https://www.instagram.com/unbautistadice/"
+        target="_blank">Instagram</a>
+    </div>
+    <NetlifyIdentity client:load />
+  </nav>
 </footer>
 <style>
-    .footer {
-        @apply py-6 border-t
-    }
-    .link {
-        @apply text-gray-500 hover:text-gray-700
-    }
+  .footer {
+    background-color: #000;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .link {
+    @apply text-gray-300 hover:text-gray-700;
+  }
+  .nav-text {
+    color: #fff;
+  }
 </style>
