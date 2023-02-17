@@ -28,7 +28,7 @@ export const SITE = {
     name: 'Impulso Cristiano',
     title: 'Impulso Cristiano',
     description: 'Impulsando tu fe',
-    url: 'https://unbautistadice.info/',
+    url: 'https://impulsocristiano.info/',
     githubUrl: 'https://github.com/one-aalam/astro-ink',
     listDrafts: true
     // description ?
